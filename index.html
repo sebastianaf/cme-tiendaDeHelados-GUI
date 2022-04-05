@@ -13,213 +13,343 @@
     <title>Tienda de helados</title>
   </head>
   <body>
-    <!-- Formulario -->
-    <div class="d-flex justify-content-center p-4">
-      <div class="border shadow">
-        <form action="" method="get">
-          <!-- Cantidad de sabores -->
-          <div class="p-2">
-            <label class="p-1" for="csabores">Cantidad de sabores</label>
-            <input
-              class="p-1"
-              placeholder="Ingrese un número"
-              id="csabores"
-              type="number"
-              min="1"
-              max="10"
-              step="1"
-            />
-          </div>
-          <!-- Sabores -->
-          <div class="p-2">
-            <label class="p-1" for="sabores">Sabores</label>
-            <input
-              class="p-1"
-              placeholder="Separados por comas"
-              id="sabores"
-              type="text"
-            />
+    <div class="d-flex flex-column justify-content-center">
+      <div
+        class="d-flex justify-content-center border round shadow m-4 bg-primary"
+      >
+        <div class="d-flex flex-column m-4">
+          <div class="display-3">🍨Tienda de Helados</div>
+          <div class="text-end h3">Facturación</div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <!-- Sabores -->
+        <div class="card shadow m-4" style="min-width: 18rem; max-width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://laloma.com.mx/media/wysiwyg/Loma_copia_3042.jpg"
+            alt="Sabores de helados"
+          />
+          <div
+            class="card-header d-flex justify-content-between align-items-baseline"
+          >
+            <h5 class="card-title d-inline">Sabores</h5>
             <button
               type="button"
-              class="btn btn-primary"
+              class="btn btn-primary btn-sm"
               data-bs-toggle="modal"
               data-bs-target="#saboresModal"
             >
-              Ver
+              Ver precios
             </button>
           </div>
-          <!-- Cantidad de bolitas -->
-          <div class="p-2">
-            <label class="p-1" for="cbolitas">Cantidad de bolitas</label>
-            <input
-              class="p-1"
-              placeholder="Ingrese un número"
-              id="cbolitas"
-              type="number"
-              min="1"
-              max="10"
-              step="1"
-            />
-          </div>
+          <div class="card-body">
+            <p class="card-text">Cantidad de bolitas</p>
 
-          <!-- Cantidad de aderesos -->
-          <div class="p-2">
-            <label class="p-1" for="caderesos">Cantidad de aderesos</label>
-            <input
-              class="p-1"
-              placeholder="Ingrese un número"
-              id="caderesos"
-              type="number"
-              min="1"
-              max="10"
-              step="1"
-            />
-          </div>
+            <!-- Vainilla -->
+            <div class="form-floating m-1">
+              <input
+                class="form-control"
+                id="vainilla"
+                type="number"
+                min="0"
+                max="10"
+                step="1"
+                value="0"
+              />
+              <label class="p-2" for="vainilla">Vainilla</label>
+            </div>
 
-          <!-- Aderesos -->
-          <div class="p-2">
-            <label class="p-1" for="aderesos">Aderesos</label>
-            <input
-              class="p-1"
-              placeholder="Separados por comas"
-              id="aderesos"
-              type="text"
-            />
+            <!-- Fresa -->
+            <div class="form-floating m-1">
+              <input
+                class="form-control"
+                id="fresa"
+                type="number"
+                min="0"
+                max="10"
+                step="1"
+                value="0"
+              />
+              <label class="p-2" for="fresa">Fresa</label>
+            </div>
+
+            <!-- Macadamia -->
+            <div class="form-floating m-1">
+              <input
+                class="form-control"
+                id="macadamia"
+                type="number"
+                min="0"
+                max="10"
+                step="1"
+                value="0"
+              />
+              <label class="p-2" for="macadamia">Macadamia</label>
+            </div>
+
+            <!-- Brownie -->
+            <div class="form-floating m-1">
+              <input
+                class="form-control"
+                id="brownie"
+                type="number"
+                min="0"
+                max="10"
+                step="1"
+                value="0"
+              />
+              <label class="p-2" for="brownie">Brownie</label>
+            </div>
+
+            <!-- Chocolate -->
+            <div class="form-floating m-1">
+              <input
+                class="form-control"
+                id="chocolate"
+                type="number"
+                min="0"
+                max="10"
+                step="1"
+                value="0"
+              />
+              <label class="p-2" for="chocolate">Chocolate</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aderesos -->
+        <div
+          class="card shadow m-4"
+          style="min-width: 18rem; max-width: 18rem"
+          style="width: 18rem"
+        >
+          <img
+            class="card-img-top"
+            src="http://3.bp.blogspot.com/-Rts8CC8Ufp4/Tb7eL22cMmI/AAAAAAAAAC0/ofdNOS3J4fI/s400/frozen-yogurt-toppings.jpg"
+            alt="Sabores de helados"
+          />
+          <div
+            class="card-header d-flex justify-content-between align-items-baseline"
+          >
+            <h5 class="card-title">Aderesos</h5>
             <button
               type="button"
-              class="btn btn-primary"
+              class="btn btn-primary btn-sm"
               data-bs-toggle="modal"
               data-bs-target="#aderesosModal"
             >
-              Ver
+              Ver precios
             </button>
           </div>
-          <!-- Unidades de cada adereso -->
-          <div class="p-2">
-            <label class="p-1" for="undaderesos">Unidades de aderesos</label>
-            <input
-              class="p-1"
-              placeholder="Ingrese un número"
-              id="undaderesos"
-              type="number"
-              min="1"
-              max="10"
-              step="1"
-            />
-          </div>
-        </form>
-      </div>
-    </div>
+          <div class="card-body">
+            <p class="card-text">Cantidad de unidades</p>
 
-    <!-- Código para usar diálogo modal de Bootstrap -->
+            <!-- Crema de mora -->
+            <div class="form-floating m-1">
+              <input
+                class="form-control"
+                id="cremademora"
+                type="number"
+                min="0"
+                max="10"
+                step="1"
+                value="0"
+              />
+              <label class="p-2" for="cremademora">Crema de mora</label>
+            </div>
 
-    <!-- Modal de Sabores-->
-    <div
-      class="modal fade"
-      id="saboresModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Sabores de helados por bolita
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <!-- Crema de leche -->
+            <div class="form-floating m-1">
+              <input
+                class="form-control"
+                id="cremadeleche"
+                type="number"
+                min="0"
+                max="10"
+                step="1"
+                value="0"
+              />
+              <label class="p-2" for="cremadeleche">Crema de leche</label>
+            </div>
+
+            <!-- Galletas waffer -->
+            <div class="form-floating m-1">
+              <input
+                class="form-control"
+                id="galletaswaffer"
+                type="number"
+                min="0"
+                max="10"
+                step="1"
+                value="0"
+              />
+              <label class="p-2" for="galletaswaffer">Galletas waffers</label>
+            </div>
+
+            <!-- Crema batida -->
+            <div class="form-floating m-1">
+              <input
+                class="form-control"
+                id="cremabatida"
+                type="number"
+                min="0"
+                max="10"
+                step="1"
+                value="0"
+              />
+              <label class="p-2" for="cremabatida">Crema batida</label>
+            </div>
           </div>
-          <div class="modal-body">
-            <table class="table table-striped">
-              <tr>
-                <td>Vainilla</td>
-                <td>$2.000</td>
-              </tr>
-              <tr>
-                <td>Fresa</td>
-                <td>$2.500</td>
-              </tr>
-              <tr>
-                <td>Macadamia</td>
-                <td>$1.000</td>
-              </tr>
-              <tr>
-                <td>Brownie</td>
-                <td>$3.000</td>
-              </tr>
-              <tr>
-                <td>Chocolate</td>
-                <td>$2.000</td>
-              </tr>
-            </table>
+        </div>
+
+        <!-- Facturación -->
+        <div
+          class="card shadow m-4"
+          style="min-width: 18rem; max-width: 18rem"
+          style="width: 18rem"
+        >
+          <div
+            class="card-header d-flex justify-content-between align-items-baseline"
+          >
+            <h5 class="card-title">Factura</h5>
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
+          <div class="card-body">
+            <p class="card-text">Resumen de la compra</p>
+            <div class="fw-lighter fs-6" id="contenidoFactura"></div>
+          </div>
+          <div class="card-footer d-flex flex-row-reverse">
+            <button type="button" class="btn btn-primary" onclick="calcular()">
+              Calcular
             </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Modal de Aderesos-->
-    <div
-      class="modal fade"
-      id="aderesosModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Aderesos de helados por unidad
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+      <!-- Código para usar diálogo modal de Bootstrap -->
+
+      <!-- Modal de Sabores-->
+      <div
+        class="modal fade"
+        id="saboresModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Costo por bolita
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-striped">
+                <thead>
+                  <th>Sabor</th>
+                  <th>Precio</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Vainilla</td>
+                    <td>$2.000</td>
+                  </tr>
+                  <tr>
+                    <td>Fresa</td>
+                    <td>$2.500</td>
+                  </tr>
+                  <tr>
+                    <td>Macadamia</td>
+                    <td>$1.000</td>
+                  </tr>
+                  <tr>
+                    <td>Brownie</td>
+                    <td>$3.000</td>
+                  </tr>
+                  <tr>
+                    <td>Chocolate</td>
+                    <td>$2.000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
           </div>
-          <div class="modal-body">
-            <table class="table table-striped">
-              <tr>
-                <td>Crema de mora</td>
-                <td>$500</td>
-              </tr>
-              <tr>
-                <td>Crema de leche</td>
-                <td>$500</td>
-              </tr>
-              <tr>
-                <td>Galletas Waffer</td>
-                <td>$2.000</td>
-              </tr>
-              <tr>
-                <td>Crema batida</td>
-                <td>$1.000</td>
-              </tr>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
+        </div>
+      </div>
+
+      <!-- Modal de Aderesos-->
+      <div
+        class="modal fade"
+        id="aderesosModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Costo por unidad
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Adereso</th>
+                    <th>Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Crema de mora</td>
+                    <td>$500</td>
+                  </tr>
+                  <tr>
+                    <td>Crema de leche</td>
+                    <td>$500</td>
+                  </tr>
+                  <tr>
+                    <td>Galletas Waffer</td>
+                    <td>$2.000</td>
+                  </tr>
+                  <tr>
+                    <td>Crema batida</td>
+                    <td>$1.000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
           </div>
         </div>
       </div>
