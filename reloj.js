@@ -10,7 +10,7 @@ const reloj = () => {
 
   setInterval(() => {
     let horaActual = `
-    ${horas < 10 ? "0" : ""}${horas + parseInt(parseInt(segundos / 60) / 60)}:${minutos % 60 < 10 ? "0" : ""}${minutos + parseInt(segundos / 60)}:${segundos % 60 < 10 ? "0" : ""}${segundos % 60}`.replace(/ /g, "");
+    ${horas < 10 ? "0" : ""}${(horas + parseInt(parseInt(segundos / 60) / 60)) %24}:${minutos % 60 < 10 ? "0" : ""}${(minutos + parseInt(segundos / 60)) %60}:${segundos % 60 < 10 ? "0" : ""}${segundos % 60}`;
     miReloj.innerHTML = horaActual;
     segundos++;
   }, 1000);
