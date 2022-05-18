@@ -24,6 +24,7 @@ const inCaseError = () => {
   alert("Se mostrará la ubicación del colegio");
 };
 
+// Esta función campura las coordenadas del usuario web
 const showPosition = () => {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(geolocate, inCaseError);
