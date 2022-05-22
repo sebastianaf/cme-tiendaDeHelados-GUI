@@ -1,3 +1,4 @@
+import { record } from "./registro.js";
 /*
   Colegio Ténico Maria Elvinia
   Grado 10º
@@ -14,6 +15,7 @@
 /*
   Estos son los mensajes para mostrar en la aplicación
 */
+
 var bienvenida = `
 --Heladería CME--
 Bienvenidos a nuestra heladería
@@ -86,9 +88,9 @@ const recuperarValores = () => {
   costos[2].forEach((adereso, i) => {
     //console.log(adereso.replace(/\s/g, "").toLowerCase());
     pedido[2].push(i + 1);
-    console.log(
+    /* console.log(
       document.getElementById(adereso.replace(/\s/g, "").toLowerCase()).value
-    );
+    ); */
     pedido[3].push(
       document.getElementById(adereso.replace(/\s/g, "").toLowerCase()).value
     );
@@ -148,6 +150,9 @@ const calcular = () => {
   nueva línea el valor total del helado
 */
   factura += `\nTOTAL = ${valorTotalAderesos + valorTotalSabor} COP`;
+  record(valorTotalAderesos + valorTotalSabor, factura);
   document.getElementById("contenidoFactura").innerText = factura;
   factura = ``;
 };
+
+document.querySelector("#button").addEventListener("click",calcular)
