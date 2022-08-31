@@ -3,7 +3,10 @@
 .card {
     width: 18rem;
     min-width: 18rem; 
-    max-width: 18rem; 
+    max-width: 18rem;
+    padding-left: 0;
+    padding-right: 0;
+
     
     max-height: 39rem;
 }
